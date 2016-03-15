@@ -47,7 +47,7 @@ public class ControladorMantenimientoEstudiate implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         int codigo = this.manipulaEstudiantes.getCodigoPorFuente(ae.getSource());
-
+                       
         switch (codigo) {
             case AGREGAR:
                 if (manipulaEstudiantes.verificar() == true) {
