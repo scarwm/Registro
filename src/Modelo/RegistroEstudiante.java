@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class RegistroEstudiante {
 
     private ArrayList<Estudiante> arregloEstudiante;
+    private String matrizDatos[][];
 
     public RegistroEstudiante() {
 
@@ -93,5 +94,29 @@ public class RegistroEstudiante {
             
         }
     }
+    
+    public String [][] getMatriz(){
+     matrizDatos= new String[arregloEstudiante.size()][Estudiante.getTamanno()];
+     for(int i=0;i<matrizDatos.length;i++){
+         for(int j=0;j<matrizDatos[i].length;j++){
+             matrizDatos[i][j]= arregloEstudiante.get(i).getDatos(j);
+             
+         }//fin de for columna
+         
+     }//fin de for fila
+     return matrizDatos;
+}
+    
+    public String getInformacionDeEstudiantes(){
+        String info="";
+            if(arregloEstudiante!=null){
+                for(int i=0; i<arregloEstudiante.size();i++){
+                    info=info+"\n"+arregloEstudiante.get(i).getInformacion();
+                }
+            }
+                
+        return info;
+    }
+    
     
 }

@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 public class ManipulaEstudiantes extends javax.swing.JFrame {
 
     private ControladorMantenimientoEstudiate cme;
+    
 
     public ManipulaEstudiantes(RegistroEstudiante regis) {
         initComponents();
@@ -74,6 +75,9 @@ public void setTexCarnet(String texCarnet) {
         return false;
     }
      
+     public void setEditable(boolean re){
+         this.texCarnet.setEditable(re);
+     }
      /**public void setText(String nombre, String carnet, String correo){
       
         texCarnet.setText(carnet);
@@ -86,6 +90,10 @@ public void setTexCarnet(String texCarnet) {
         this.texCarnet.setText("");
         this.texNombre.setText("");
         this.texCorreo.setText("");
+    }
+    
+    public void enableBoton(boolean re){
+        this.guiBotones1.setBoton(re);
     }
 
     /**

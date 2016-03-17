@@ -14,6 +14,33 @@ public class Estudiante {
     private String carnet;
     private String nombre;
     private String correo;
+    private static String[] etiquetas = {"carnet", "nombre", "correo"};
+
+    public static String[] getEtiquetas() {
+        return etiquetas;
+    }
+
+    public static int getTamanno() {
+        return etiquetas.length;
+    }
+
+    public String getDatos(int j) {
+
+        switch (j) {
+            case 0:
+                return carnet;
+                
+            case 1:
+                return nombre;
+                
+            case 2: 
+                return correo;
+                
+
+        }
+        return null;
+
+    }
 
     public Estudiante() {
     }
@@ -48,6 +75,8 @@ public class Estudiante {
         this.correo = correo;
     }
     
-    
-    
+    public String getInformacion(){
+        return "Carnet "+getCarnet()+" Nombre "+getNombre()+" Correo "+getCorreo();
+    }
+
 }

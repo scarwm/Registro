@@ -32,6 +32,16 @@
                 <Property name="text" type="java.lang.String" value="Manipular Estudiantes"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="reporteEstudiantes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Reporte Estudiantes"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="consultaEstudiantes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Consultar Estudiantes"/>
+              </Properties>
+            </MenuItem>
           </SubComponents>
         </Menu>
       </SubComponents>

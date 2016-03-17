@@ -33,6 +33,7 @@ public class GuiBotones extends javax.swing.JPanel {
         botoAgregar = new javax.swing.JButton();
         botonEdditar = new javax.swing.JButton();
         botonEliminar = new javax.swing.JButton();
+        botonGuardarDatos = new javax.swing.JButton();
 
         botonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
         botonBuscar.setText("Buscar");
@@ -56,31 +57,41 @@ public class GuiBotones extends javax.swing.JPanel {
             }
         });
 
+        botonGuardarDatos.setText("Guardar Datos");
+        botonGuardarDatos.setEnabled(false);
+        botonGuardarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarDatosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(botoAgregar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonBuscar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonEdditar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botonGuardarDatos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonEliminar)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botoAgregar)
                     .addComponent(botonBuscar)
                     .addComponent(botonEdditar)
+                    .addComponent(botonGuardarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonEliminar))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addGap(33, 33, 33))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -91,12 +102,21 @@ public class GuiBotones extends javax.swing.JPanel {
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonBuscarActionPerformed
+
+    private void botonGuardarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarDatosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonGuardarDatosActionPerformed
      public void agregarEvento(ControladorMantenimientoEstudiate me){
          this.botoAgregar.addActionListener(me);
          this.botonBuscar.addActionListener(me);
          this.botonEdditar.addActionListener(me);
          this.botonEliminar.addActionListener(me);
+         this.botonGuardarDatos.addActionListener(me);
          
+     }
+     
+     public void setBoton(boolean re){
+         this.botonGuardarDatos.setEnabled(re);
      }
      
      public int getCodigoPorFuente(Object object){
@@ -113,7 +133,9 @@ public class GuiBotones extends javax.swing.JPanel {
         }else if(this.botonEliminar.equals(object)){
             dev=ControladorMantenimientoEstudiate.ELIMINAR;
             
-        }
+        }else if (this.botonGuardarDatos.equals(object)) {
+             dev=ControladorMantenimientoEstudiate.GUARDAR;
+         }
          return dev;
      }
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -121,5 +143,9 @@ public class GuiBotones extends javax.swing.JPanel {
     private javax.swing.JButton botonBuscar;
     private javax.swing.JButton botonEdditar;
     private javax.swing.JButton botonEliminar;
+    private javax.swing.JButton botonGuardarDatos;
     // End of variables declaration//GEN-END:variables
+
+    
+    
 }

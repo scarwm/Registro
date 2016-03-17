@@ -24,6 +24,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.cVentanaPrincipal= new ControlVentanaPrincipal();
         this.btnSalir.addActionListener(cVentanaPrincipal);
         this.jtManipulaEstudiante.addActionListener(cVentanaPrincipal);
+        this.reporteEstudiantes.addActionListener(cVentanaPrincipal);
+        this.consultaEstudiantes.addActionListener(cVentanaPrincipal);
     }
 
     /**
@@ -41,6 +43,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnSalir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jtManipulaEstudiante = new javax.swing.JMenuItem();
+        reporteEstudiantes = new javax.swing.JMenuItem();
+        consultaEstudiantes = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +67,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jtManipulaEstudiante.setText("Manipular Estudiantes");
         jMenu2.add(jtManipulaEstudiante);
+
+        reporteEstudiantes.setText("Reporte Estudiantes");
+        jMenu2.add(reporteEstudiantes);
+
+        consultaEstudiantes.setText("Consultar Estudiantes");
+        jMenu2.add(consultaEstudiantes);
 
         menuEstudiante.add(jMenu2);
 
@@ -129,10 +139,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem btnSalir;
+    private javax.swing.JMenuItem consultaEstudiantes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuItem jtManipulaEstudiante;
     private javax.swing.JMenuBar menuEstudiante;
+    private javax.swing.JMenuItem reporteEstudiantes;
     // End of variables declaration//GEN-END:variables
 }
